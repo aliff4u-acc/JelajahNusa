@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JelajahNusa | Temukan Cerita, Jelajahi Indonesia</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <!-- NAVBAR (BOOTSTRAP 5) Menu: Beranda, Tentang Kami, Destinasi, Paket, Kontak, Galeri -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="bi bi-compass-fill text-warning"></i>
+          JelajahNusa.<span class="brand-dot"></span>
+        </a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#destinations">Destinasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Paket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galeri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a href="#booking-section" class="btn btn-teal btn-sm px-3 py-2 rounded-pill w-100">
+                <i class="bi bi-calendar2-check me-1"></i> Booking Segera
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <!-- HOME (HERO SECTION) -->
+    <section id="home" class="hero-section">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9">
+            <div class="hero-badge">
+              <span>"Temukan Cerita, Jelajahi Indonesia"</span>
+            </div>
+            <h1 class="hero-title">
+              Jelajahi Keindahan Indonesia Bersama Jelajah Nusa
+            </h1>
+            <p class="hero-subtitle">
+              Temukan pengalaman perjalanan yang berkesan, mulai dari pantai tropis, pegunungan, hingga kekayaan budaya Nusantara.
+            </p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+              <a href="#destinations" class="btn-amber text-decoration-none">
+                <span>Explore Destinasi</span>
+                <i class="bi bi-arrow-down-right-circle"></i>
+              </a>
+              <a href="#packages" class="btn-outline-hero text-decoration-none">
+                <span>View Paket</span>
+                <i class="bi bi-suitcase2"></i>
+              </a>
+            </div>
+
+            <!-- Highlight Statistik Singkat -->
+            <div class="row g-3 justify-content-center mt-5 pt-3 border-top border-light border-opacity-25">
+              <div class="col-4 col-md-3">
+                <div class="fw-bold fs-4 text-warning">25+</div>
+                <div class="small text-light opacity-75">Destinasi Nusantara</div>
+              </div>
+              <div class="col-4 col-md-3">
+                <div class="fw-bold fs-4 text-warning">4.9/5</div>
+                <div class="small text-light opacity-75">Rating Wisatawan</div>
+              </div>
+              <div class="col-4 col-md-3">
+                <div class="fw-bold fs-4 text-warning">100%</div>
+                <div class="small text-light opacity-75">Pemandu Lokal Resmi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Kami SECTION -->
+    <section id="about" class="bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Kolom Visual -->
+          <div class="col-lg-5">
+            <div class="position-relative">
+              <img 
+                src="aset/Bali.jpg" 
+                alt="Pesona Budaya dan Alam Indonesia" 
+                class="img-fluid rounded-4 shadow-lg w-100"
+                style="object-fit: cover; max-height: 490px;"
+              >
+              <div class="bg-white p-3 p-md-4 rounded-4 shadow position-absolute bottom-0 start-0 m-3 border" style="max-width: 260px;">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center" style="width: 48px; height: 48px; flex-shrink: 0;">
+                    <i class="bi bi-award-fill fs-4"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">Biro Wisata Terpercaya</div>
+                    <div class="small text-muted">Teman perjalanan sejak 2020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Deskripsi & 4 Nilai Layanan -->
+          <div class="col-lg-7">
+            <span class="section-eyebrow">Tentang Kami</span>
+            <h2 class="section-title">Your Journey, Our Passion</h2>
+            <p class="text-muted fs-6 mb-4">
+              JelajahNusa hadir untuk membantu wisatawan menjelajahi keindahan Indonesia melalui perjalanan yang nyaman, terencana, dan berkesan. Kami percaya setiap perjalanan memiliki cerita yang layak untuk dikenang.
+            </p>
+
+            <!-- 4 Nilai Layanan Wajib -->
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="value-card">
+                  <div class="value-icon-box">
+                    <i class="bi bi-map-fill"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-1 font-sans" style="font-family: 'Plus Jakarta Sans', sans-serif;">Paket perjalanan terkurasi</h3>
+                  <p class="small text-muted mb-0">Itinerary dirancang khusus memadukan ikon wisata populer dan hidden gem autentik.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="value-card">
+                  <div class="value-icon-box">
+                    <i class="bi bi-person-badge-fill"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Pemandu berpengalaman</h3>
+                  <p class="small text-muted mb-0">Didampingi tour leader ramah, bersertifikat, dan memahami sejarah budaya lokal.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="value-card">
+                  <div class="value-icon-box">
+                    <i class="bi bi-tag-fill"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Harga transparan</h3>
+                  <p class="small text-muted mb-0">Rincian biaya jelas sejak awal tanpa biaya tersembunyi selama masa liburan Anda.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="value-card">
+                  <div class="value-icon-box">
+                    <i class="bi bi-headset"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Dukungan pelanggan</h3>
+                  <p class="small text-muted mb-0">Tim reservasi responsif siap membantu perencanaan hingga kepulangan Anda.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINASI SECTION -->
+    <section id="destinations">
+      <div class="container">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span class="section-eyebrow">Destinasi Unggulan</span>
+          <h2 class="section-title">Jelajahi Destinasi Populer</h2>
+          <p class="text-muted mx-auto" style="max-width: 620px;">
+            Pilih destinasi impian Anda di berbagai penjuru Nusantara dengan panorama alam memukau dan kekayaan budaya yang tiada duanya.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Destinasi 1: Bali -->
+          <div class="col-md-6 col-lg-3">
+            <article class="destination-card">
+              <div class="card-img-wrapper">
+                <img 
+                  src="aset/Bali.jpg"
+                  alt="Wisata Pura dan Pantai di Bali">
+                <span class="location-pill">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Bali
+                </span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="h4 fw-bold mb-2">Bali</h3>
+                <p class="text-muted small mb-0">
+                  Pulau dengan pantai, budaya, dan panorama alam.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Destinasi 2: Raja Ampat -->
+          <div class="col-md-6 col-lg-3">
+            <article class="destination-card">
+              <div class="card-img-wrapper">
+                <img 
+                  src="aset/Raja ampat.avif" 
+                  alt="Kepulauan Raja Ampat Papua Barat Daya">
+                <span class="location-pill">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Papua Barat Daya
+                </span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="h4 fw-bold mb-2">Raja Ampat</h3>
+                <p class="text-muted small mb-0">
+                  Kepulauan dengan keindahan laut dan terumbu karang.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Destinasi 3: Bromo -->
+          <div class="col-md-6 col-lg-3">
+            <article class="destination-card">
+              <div class="card-img-wrapper">
+                <img 
+                  src="aset/Bromo.avif" 
+                  alt="Matahari Terbit di Gunung Bromo Jawa Timur">
+                <span class="location-pill">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Jawa Timur
+                </span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="h4 fw-bold mb-2">Bromo</h3>
+                <p class="text-muted small mb-0">
+                  Pegunungan dengan panorama matahari terbit.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Destinasi 4: Labuan Bajo -->
+          <div class="col-md-6 col-lg-3">
+            <article class="destination-card">
+              <div class="card-img-wrapper">
+                <img 
+                  src="aset/Labuan bajo.jpg" 
+                  alt="Pulau Padar dan Laut Labuan Bajo NTT">
+                <span class="location-pill">
+                  <i class="bi bi-geo-alt-fill text-warning"></i> Nusa Tenggara Timur
+                </span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <h3 class="h4 fw-bold mb-2">Labuan Bajo</h3>
+                <p class="text-muted small mb-0">
+                  Gerbang menuju Pulau Komodo dan gugusan pulau yang eksotis.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKET SECTION (4 PAKET WISATA + TOMBOL DETAIL PAKET) -->
+    <section id="packages" class="bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Paket Wisata Pilihan</span>
+          <h2 class="section-title">Pilih Petualanganmu Untuk Berikutnya</h2>
+          <p class="text-muted mx-auto" style="max-width: 640px;">
+            Klik foto untuk melihat ukuran besar, atau pilih <strong>"Detail Paket"</strong> untuk rincian fasilitas dan pemesanan.
+          </p>
+        </div>
+
+        <!-- Container Card Paket -->
+        <div class="row g-4" id="packagesContainer"></div>
+      </div>
+    </section>
+
+    <!-- GALERI SECTION (6 FOTO AKTIVITAS & KEINDAHAN INDONESIA) -->
+    <section id="gallery">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Momen Perjalanan</span>
+          <h2 class="section-title">Travel Galeri &amp; Experience</h2>
+          <p class="text-muted mx-auto" style="max-width: 620px;">
+            Dokumentasi aktivitas wisata, keindahan alam, budaya, dan cerita tak terlupakan bersama para pelancong Jelajah Nusa.
+          </p>
+        </div>
+
+        <!-- CSS Grid 6 Foto menggunakan aset yang sudah diunggah -->
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item" data-title="Snorkeling Terumbu Karang" data-desc="Menjelajahi keindahan bawah laut dan terumbu karang Nusantara yang jernih." data-img="aset/Snorkeling di laut.jpg">
+            <img src="aset/Snorkeling di laut.jpg" alt="Snorkeling di bawah laut">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Aktivitas Laut</span>
+              <h4 class="h6 fw-bold mb-0">Snorkeling Terumbu Karang</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-title="Golden Sunrise Gunung Bromo" data-desc="Menyaksikan matahari terbit keemasan di atas lautan awan Gunung Bromo." data-img="aset/Bromo.avif">
+            <img src="aset/Bromo.avif" alt="Sunrise Pegunungan Bromo">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Petualangan Alam</span>
+              <h4 class="h6 fw-bold mb-0">Golden Sunrise Bromo</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-title="Pesona Pura Ulun Danu Bali" data-desc="Ketenangan suasana danau dan kearifan warisan budaya lokal Bali." data-img="aset/Pura di Bali.jpg">
+            <img src="aset/Pura di Bali.jpg" alt="Pura Ulun Danu di Bali">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Budaya &amp; Alam</span>
+              <h4 class="h6 fw-bold mb-0">Pesona Pura Danau Bali</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-title="Gugusan Karst Raja Ampat" data-desc="Eksplorasi pulau karst dan perairan biru jernih di kepulauan Raja Ampat." data-img="aset/Raja ampat.avif">
+            <img src="aset/Raja ampat.avif" alt="Gugusan Pulau Raja Ampat">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Jelajah Pulau Pulau</span>
+              <h4 class="h6 fw-bold mb-0">Pesona Pulau Raja Ampat</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-title="Senja di Pesisir Tropis" data-desc="Momen senja hangat di tepi pantai Nusantara dengan pantulan langit kemerahan." data-img="aset/Senja di pantai.avif">
+            <img src="aset/Senja di pantai.avif" alt="Senja di Pantai Tropis Indonesia">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Pantai Tropis</span>
+              <h4 class="h6 fw-bold mb-0">Senja di Pesisir Pantai Tropis</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-title="Teluk Eksotis Labuan Bajo" data-desc="Panorama bukit hijau dan teluk biru menawan di gerbang Taman Nasional Komodo." data-img="aset/Labuan bajo.jpg">
+            <img src="aset/Labuan bajo.jpg" alt="Panorama Teluk Labuan Bajo">
+            <div class="gallery-overlay">
+              <span class="badge bg-warning text-dark w-auto align-self-start mb-1">Pelayaran &amp; Panorama</span>
+              <h4 class="h6 fw-bold mb-0">Teluk Eksotis Labuan Bajo</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING SECTION (FORM BOOKING PAKET WISATA) -->
+    <section id="booking-section" class="bg-white border-top border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="form-card border-0" style="background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); color: #ffffff;">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                  <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill">Reservasi Instan</span>
+                  <h2 class="h2 fw-bold text-white mb-2">Booking Paket Wisata</h2>
+                  <p class="small text-light opacity-90 mb-3">
+                    Pilih paket petualangan Anda, tentukan jumlah peserta dan tanggal keberangkatan. Estimasi total biaya dihitung secara otomatis!
+                  </p>
+                  <div class="p-3 rounded-3 bg-white bg-opacity-10 border border-light border-opacity-25">
+                    <div class="small text-warning fw-semibold">Estimasi Total Biaya:</div>
+                    <div class="fs-3 fw-bold" id="bookingEstimatedTotal">Rp2.450.000</div>
+                    <div class="small opacity-75" id="bookingSummaryNote">Bali Escape • 1 Peserta</div>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="bg-white text-dark p-4 rounded-4 shadow">
+                    <!-- Notifikasi Hasil Booking -->
+                    <div id="bookingAlertBox" class="alert d-none mb-3" role="alert"></div>
+
+                    <form id="bookingForm" novalidate>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label for="bookingName" class="form-label fw-semibold small">Nama Pemesan <span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="bookingName" placeholder="Masukkan nama lengkap">
+                          <div class="invalid-feedback">Nama pemesan wajib di isi.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="bookingPackage" class="form-label fw-semibold small">Pilih Paket Wisata <span class="text-danger">*</span></label>
+                          <select class="form-select" id="bookingPackage">
+                            <option value="Bali Escape" data-price="2450000">Bali Escape (Rp2.450.000/org)</option>
+                            <option value="Bromo Sunrise Trip" data-price="1350000">Bromo Sunrise Trip (Rp1.350.000/org)</option>
+                            <option value="Raja Ampat Discovery" data-price="5750000">Raja Ampat Discovery (Rp5.750.000/org)</option>
+                            <option value="Labuan Bajo Explorer" data-price="3950000">Labuan Bajo Explorer (Rp3.950.000/org)</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="bookingDate" class="form-label fw-semibold small">Tanggal Keberangkatan <span class="text-danger">*</span></label>
+                          <input type="date" class="form-control" id="bookingDate">
+                          <div class="invalid-feedback">Pilih tanggal keberangkatan yang valid.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="bookingGuests" class="form-label fw-semibold small">Jumlah Orang <span class="text-danger">*</span></label>
+                          <input type="number" class="form-control" id="bookingGuests" min="1" max="50" value="1">
+                          <div class="invalid-feedback">Minimal 1 Orang.</div>
+                        </div>
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-amber w-100 justify-content-center py-2">
+                            <i class="bi bi-check2-circle"></i> Konfirmasi Simulasi Booking
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (INFORMASI KONTAK & FORMULIR) -->
+    <section id="contact">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-eyebrow">Hubungi Kami</span>
+          <h2 class="section-title">Mari Merencanakan Perjalanan Anda Berikutnya</h2>
+          <p class="text-muted mx-auto" style="max-width: 640px;">
+            Punya pertanyaan atau ingin merencanakan liburan keluarga? Hubungi tim JelajahNusa melalui informasi berikut.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Kolom Kiri: Informasi Kontak -->
+          <div class="col-lg-5 d-flex flex-column gap-3">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Alamat Kantor</h3>
+                <p class="text-muted small mb-0">Jl. Poras No. 7, Bogor</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Telepon</h3>
+                <p class="text-muted small mb-0">(0251) 8376 224</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Email</h3>
+                <p class="text-muted small mb-0">hello@jelajahnusa.id</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div>
+                <h3 class="h6 fw-bold mb-1" style="font-family: 'Plus Jakarta Sans', sans-serif;">Instagram</h3>
+                <p class="text-muted small mb-0">@jelajahnusa</p>
+              </div>
+            </div>
+
+            <!-- Jam Operasional -->
+            <div class="p-4 rounded-4 bg-white border mt-auto">
+              <div class="d-flex align-items-center gap-2 text-teal fw-bold mb-1" style="color: var(--primary-teal);">
+                <i class="bi bi-clock-fill"></i>
+                <span>Jam Layanan Reservasi</span>
+              </div>
+              <p class="small text-muted mb-0">Senin – Sabtu: 08.00 – 20.00 WIB<br>Minggu &amp; Hari Libur: 09.00 – 17.00 WIB</p>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Formulir Kontak -->
+          <div class="col-lg-7">
+            <div class="form-card h-100">
+              <h3 class="h4 fw-bold mb-3">Kirim Pesan kepada Tim Kami</h3>
+
+              <!-- Banner Informasi Pemesanan -->
+              <div id="packagePrefillBanner" class="alert alert-info d-none align-items-center justify-content-between gap-2 mb-3" role="alert">
+                <div class="small">
+                  <i class="bi bi-info-circle-fill me-1"></i>
+                  <span id="packagePrefillText">Paket terpilih telah di isi otomatis ke subjek formulir.</span>
+                </div>
+                <button type="button" class="btn-close btn-sm" aria-label="Close" onclick="document.getElementById('packagePrefillBanner').classList.add('d-none')"></button>
+              </div>
+
+              <!-- Notif Validasi Sukses / Error Form Kontak -->
+              <div id="contactFeedbackAlert" class="alert d-none mb-3" role="alert"></div>
+
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label fw-semibold small">Nama Lengkap <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="contactName" placeholder="Contoh: Budi Santoso">
+                    <div class="invalid-feedback" id="errorName">Nama lengkap tidak boleh sampai kosong.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label fw-semibold small">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="contactEmail" placeholder="nama@email.com">
+                    <div class="invalid-feedback" id="errorEmail">Masukkan alamat email anda yang valid.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label fw-semibold small">Subjek <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="contactSubject" placeholder="Contoh: Konsultasi Paket Wisata Keluarga">
+                    <div class="invalid-feedback" id="errorSubject">Subjek pesan tidak boleh dikosongkan.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label fw-semibold small">Pesan <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="contactMessage" rows="4" placeholder="Tuliskan pertanyaan, rencana tanggal keberangkatan, atau kebutuhan khusus perjalanan Anda..."></textarea>
+                    <div class="invalid-feedback" id="errorMessage">Pesan tidak boleh kosong.</div>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-teal w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                      <i class="bi bi-send-fill"></i>
+                      <span>Kirim Pesan</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-5">
+          <a class="navbar-brand text-white mb-2" href="#home">
+            <i class="bi bi-compass-fill text-warning"></i>
+            Jelajah Nusa.<span class="brand-dot"></span>
+          </a>
+          <p class="small text-secondary mb-3" style="max-width: 380px;">
+            "Temukan Cerita, Jelajahi Indonesia" | Biro perjalanan wisata terpercaya yang menghadirkan pengalaman eksplorasi Nusantara secara nyaman, terencana, dan berkesan.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#contact" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#contact" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="#contact" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Telepon"><i class="bi bi-telephone"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h4 class="h6 text-white fw-bold mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif;">Navigasi:</h4>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="#home" class="text-secondary text-decoration-none">Beranda</a></li>
+            <li><a href="#about" class="text-secondary text-decoration-none">Tentang Kami</a></li>
+            <li><a href="#destinations" class="text-secondary text-decoration-none">Destinasi</a></li>
+            <li><a href="#packages" class="text-secondary text-decoration-none">Paket</a></li>
+            <li><a href="#gallery" class="text-secondary text-decoration-none">Galeri</a></li>
+            <li><a href="#contact" class="text-secondary text-decoration-none">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <h4 class="h6 text-white fw-bold mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif;">Hubungi Kami:</h4>
+          <ul class="list-unstyled small text-secondary d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt text-warning me-2"></i>Jl. Poras No. 7, Bogor</li>
+            <li><i class="bi bi-telephone text-warning me-2"></i>(0251) 8376 224</li>
+            <li><i class="bi bi-envelope text-warning me-2"></i>hello@jelajahnusa.id</li>
+            <li><i class="bi bi-instagram text-warning me-2"></i>@jelajahnusa</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center small text-secondary gap-2">
+        <div>&copy; 2026 JelajahNusa Travel Agency. Hak Cipta Dilindungi.</div>
+        <div>Sertikom X RPL • Web Design</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL PAKET WISATA -->
+  <div class="modal fade" id="packageDetailModal" tabindex="-1" aria-labelledby="modalPackageTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 rounded-4 overflow-hidden shadow-lg">
+        <div class="modal-header border-0 bg-light px-4 py-3">
+          <div>
+            <span class="badge bg-warning text-dark mb-1" id="modalPackageDuration">3 Hari 2 Malam</span>
+            <h3 class="modal-title h4 fw-bold mb-0" id="modalPackageTitle">Nama Paket Wisata</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+
+        <div class="modal-body p-0">
+          <!-- Foto Paket Ukuran Besar -->
+          <div class="position-relative" style="height: 290px; background-color: #cbd5e1;">
+            <img 
+              id="modalPackageImage" 
+              src=""
+              alt="Foto Detail Paket Wisata" 
+              class="w-100 h-100" 
+              style="object-fit: cover;"
+            >
+            <div class="position-absolute bottom-0 start-0 end-0 p-3 p-md-4 text-white" style="background: linear-gradient(to top, rgba(15,23,42,0.88), transparent);">
+              <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+                <div>
+                  <div class="small text-warning fw-semibold">
+                    <i class="bi bi-geo-alt-fill me-1"></i><span id="modalPackageDestination">Destinasi</span>
+                  </div>
+                  <div class="small opacity-90" id="modalPackageHighlight">Highlight Perjalanan</div>
+                </div>
+                <div class="text-md-end">
+                  <span class="small d-block opacity-75">Harga Mulai Dari</span>
+                  <span class="fs-4 fw-bold text-warning" id="modalPackagePrice">Rp0</span>
+                  <span class="small">/ orang</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail Deskripsi & Fasilitas -->
+          <div class="p-4">
+            <h4 class="h6 fw-bold text-uppercase text-muted mb-2" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.05em;">Deskripsi &amp; Highlight Perjalanan</h4>
+            <p class="text-dark mb-4" id="modalPackageDescription">
+              Deskripsi lengkap paket perjalanan wisata.
+            </p>
+
+            <h4 class="h6 fw-bold text-uppercase text-muted mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0.05em;">Fasilitas Termasuk dalam Paket</h4>
+            <div class="row g-2" id="modalPackageFacilities">
+              <!-- Di isi dinamis -->
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer bg-light border-0 px-4 py-3 d-flex justify-content-between">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">
+            Tutup
+          </button>
+          <button type="button" class="btn btn-amber py-2 px-4" id="modalBookPackageBtn">
+            <i class="bi bi-bag-check-fill"></i>
+            <span>Pesan Paket</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LIGHTBOX GALLERY SEDERHANA -->
+  <div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 overflow-hidden bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="lightboxTitle">Galeri JelajahNusa</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="lightboxImg" src="" alt="Preview Galeri" class="w-100" style="max-height: 480px; object-fit: cover;">
+          <p class="p-3 mb-0 small text-light" id="lightboxDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
