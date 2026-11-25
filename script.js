@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   // DATA PAKET WISATA JELAJAH NUSA
   const tourPackages = [
     {
@@ -8,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: "3 Hari 2 Malam",
       price: 2450000,
       priceFormatted: "Rp2.450.000",
-      highlight: "Pantai, budaya, dan sunset",
+      highlight: "Pantai, budaya, dan matahari terbenam",
       image: "aset/Bali.jpg",
       description:
-        "Nikmati liburan tropis terbaik di Pulau Dewata dengan kunjungan ke Pura Ulun Danu Beratan, terasering hijau Ubud, pantai pasir putih Nusa Dua, serta makan malam romantis saat matahari terbenam di Jimbaran.",
+        "Kunjungi Pura Ulun Danu Beratan, kawasan persawahan di Ubud, dan pantai di Nusa Dua. Perjalanan juga mencakup makan malam di Jimbaran.",
       facilities: [
         "Transportasi AC Pariwisata selama tour",
         "Penginapan Hotel Bintang 4 (2 Malam)",
@@ -28,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: "2 Hari 1 Malam",
       price: 1350000,
       priceFormatted: "Rp1.350.000",
-      highlight: "Sunrise dan lautan pasir",
+      highlight: "Matahari terbit dan lautan pasir",
       image: "aset/Bromo.avif",
       description:
-        "Petualangan seru mengejar matahari terbit keemasan di Puncak Penanjakan, menjelajahi lautan pasir berbisik menggunakan Jeep 4WD, mendaki Kawah Bromo, hingga berswafoto di Bukit Teletubbies.",
+        "Lihat matahari terbit dari Penanjakan, melintasi lautan pasir dengan Jeep 4WD, lalu kunjungi Kawah Bromo dan Bukit Teletubbies.",
       facilities: [
         "Transportasi antar-jemput Malang/Surabaya",
         "Sewa Jeep Hardtop 4WD resmi Bromo",
@@ -48,10 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: "4 Hari 3 Malam",
       price: 5750000,
       priceFormatted: "Rp5.750.000",
-      highlight: "Island hopping dan snorkeling",
+      highlight: "Jelajah pulau dan snorkeling",
       image: "aset/Raja ampat.avif",
       description:
-        "Jelajahi surga bahari timur Indonesia dari puncak bukit karst Piaynemo, Telaga Bintang, Pasir Timbul Mansuar, hingga snorkeling di taman laut berkelas dunia dengan ratusan spesies terumbu karang.",
+        "Kunjungi Piaynemo, Telaga Bintang, dan Pasir Timbul Mansuar. Paket ini juga mencakup kegiatan snorkeling di perairan Raja Ampat.",
       facilities: [
         "Speedboat eksplorasi pulau (Island Hopping)",
         "Penginapan Resort tepi pantai (3 Malam)",
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       highlight: "Pulau Komodo dan sailing",
       image: "aset/Labuan bajo.jpg",
       description:
-        "Rasakan sensasi berlayar menyusuri perairan Flores menuju Pulau Padar, bertemu langsung satwa purba Komodo di habitat aslinya, bersantai di Pink Beach, dan berenang bersama pari manta di Manta Point.",
+        "Berlayar menuju Pulau Padar, mengunjungi habitat komodo, dan singgah di Pink Beach serta Manta Point.",
       facilities: [
         "Sailing Trip kapal wisata kabin AC",
         "Akomodasi penginapan/kabin (2 Malam)",
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="p-4 d-flex flex-column flex-grow-1">
             <h3 class="h4 fw-bold mb-1">${pkg.name}</h3>
             <p class="small text-muted mb-3">
-              <i class="bi bi-stars text-warning me-1"></i>Highlight: ${pkg.highlight}
+              <i class="bi bi-stars text-warning me-1"></i>${pkg.highlight}
             </p>
             <div class="mt-auto pt-3 border-top">
               <div class="small text-muted">Mulai dari</div>
@@ -168,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modalPackageDestination").textContent =
       pkg.destination;
     document.getElementById("modalPackageHighlight").textContent =
-      `Highlight: ${pkg.highlight}`;
+      pkg.highlight;
     document.getElementById("modalPackagePrice").textContent =
       pkg.priceFormatted;
     document.getElementById("modalPackageDescription").textContent =
@@ -216,10 +217,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const prefillText = document.getElementById("packagePrefillText");
 
     contactSubjectInput.value = `Pemesanan Paket: ${selectedPackageForModal.name} (${selectedPackageForModal.duration})`;
-    contactMessageInput.value = `Halo tim JelajahNusa, saya tertarik untuk memesan paket wisata "${selectedPackageForModal.name}" ke ${selectedPackageForModal.destination} dengan harga ${selectedPackageForModal.priceFormatted}/orang. Mohon informasi ketersediaan jadwal keberangkatan.`;
+    contactMessageInput.value = `Halo, saya tertarik dengan paket ${selectedPackageForModal.name} ke ${selectedPackageForModal.destination}. Apakah masih ada jadwal keberangkatan?`;
 
-    // Tampilkan notifikasi banner simulasi pemesanan
-    prefillText.innerHTML = `<strong>Simulasi Pemesanan Aktif:</strong> Paket <strong>${selectedPackageForModal.name}</strong> telah otomatis diisikan pada formulir di bawah ini. Silakan lengkapi data diri Anda.`;
+    prefillText.innerHTML = `Paket <strong>${selectedPackageForModal.name}</strong> dipilih. Lengkapi formulir jika ingin mengirim pertanyaan.`;
     prefillBanner.classList.remove("d-none");
     prefillBanner.classList.add("d-flex");
 
@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = pricePerPerson * guests;
 
     bookingTotalEl.textContent = formatRupiah(total);
-    bookingNoteEl.textContent = `${selectedOption.value} • ${guests} Peserta`;
+    bookingNoteEl.textContent = `${selectedOption.value} • ${guests} orang`;
   }
 
   bookingPackageEl.addEventListener("change", updateBookingEstimation);
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isValid) {
       bookingAlertBox.className = "alert alert-danger mb-3";
       bookingAlertBox.innerHTML =
-        '<i class="bi bi-exclamation-triangle-fill me-1"></i> Mohon lengkapi seluruh data booking paket wisata dengan benar.';
+        '<i class="bi bi-exclamation-triangle-fill me-1"></i> Periksa kembali nama, tanggal keberangkatan, dan jumlah orang.';
       bookingAlertBox.classList.remove("d-none");
       return;
     }
@@ -309,9 +309,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     bookingAlertBox.className = "alert alert-success mb-3";
     bookingAlertBox.innerHTML = `
-      <div class="fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Simulasi Pemesanan Paket Berhasil!</div>
+      <div class="fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Simulasi pemesanan selesai</div>
       <div class="small mt-1">
-        Terima kasih <strong>${escapeHTML(nameInput.value.trim())}</strong>. Permintaan booking paket <strong>${escapeHTML(selectedPkgName)}</strong> untuk <strong>${guestsVal} peserta</strong> pada tanggal <strong>${bookingDateEl.value}</strong> (Estimasi: <strong>${totalBiaya}</strong>) telah dicatat oleh tim reservasi JelajahNusa.
+        <strong>${escapeHTML(nameInput.value.trim())}</strong>, perkiraan biaya untuk <strong>${escapeHTML(selectedPkgName)}</strong> bagi <strong>${guestsVal} orang</strong> pada <strong>${bookingDateEl.value}</strong> adalah <strong>${totalBiaya}</strong>. Ini hanya simulasi; pemesanan belum dikirim.
       </div>
     `;
     bookingAlertBox.classList.remove("d-none");
@@ -322,8 +322,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // VALIDASI FORMULIR KONTAK
-  // Ketentuan: Nama, email, subjek, dan pesan tidak boleh kosong;
-  // Email harus format valid; tampilkan pesan error/sukses dinamis.
+  // Ketentuan: Nama, email, subjek, dan pesan tidak boleh dikosongkan;
+  // Email harus format valid; tampilkan pesan error/sukses.
   const contactForm = document.getElementById("contactForm");
   const contactName = document.getElementById("contactName");
   const contactEmail = document.getElementById("contactEmail");
@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isFormValid) {
       contactFeedbackAlert.className = "alert alert-danger mb-3";
       contactFeedbackAlert.innerHTML =
-        '<i class="bi bi-exclamation-circle-fill me-2"></i><strong>Pengiriman gagal:</strong> Mohon periksa dan lengkapi kolom yang ditandai merah.';
+        '<i class="bi bi-exclamation-circle-fill me-2"></i><strong>Formulir belum lengkap.</strong> Periksa kembali kolom yang ditandai.';
       contactFeedbackAlert.classList.remove("d-none");
       return;
     }
@@ -420,9 +420,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="d-flex align-items-start gap-2">
         <i class="bi bi-check-circle-fill fs-5 mt-1"></i>
         <div>
-          <strong>Pesan Berhasil Terkirim!</strong>
+          <strong>Pratinjau pesan</strong>
           <p class="small mb-0 mt-1">
-            Terima kasih <strong>${escapeHTML(nameVal)}</strong>, pesan Anda dengan subjek <em>"${escapeHTML(subjectVal)}"</em> telah kami terima. Tim JelajahNusa akan segera menghubungi Anda melalui <strong>${escapeHTML(emailVal)}</strong>.
+            Pesan untuk <em>"${escapeHTML(subjectVal)}"</em> sudah siap, tetapi belum dikirim. Hubungi kami melalui email atau telepon yang tercantum di halaman ini.
           </p>
         </div>
       </div>
@@ -502,9 +502,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (link.getAttribute("href") === `#${currentSectionId}`) {
         link.classList.add("active");
       }
+      
     });
   });
 
-  // Inisialisasi awal render paket wisata
+  // Inisialisasi awal untuk paket wisata 
   renderPackages();
 });

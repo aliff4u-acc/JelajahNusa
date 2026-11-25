@@ -51,8 +51,8 @@ section {
    ========================================= */
 .navbar-custom {
   background-color: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-color);
   padding: 0.85rem 0;
   transition: var(--transition-smooth);
@@ -527,6 +527,32 @@ footer {
   color: #cbd5e1;
   padding: 3.5rem 0 2rem;
 }
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  display: flex;
+  background-color: #0f766e;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(46, 173, 112, 0.25);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.back-to-top-btn:hover {
+  background-color: #12372a;
+  transform: translateY(-2px);
+}
+
 
 /* Tablet (768px - 1199px) */
 @media (max-width: 1199px) {
