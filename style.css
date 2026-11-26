@@ -130,7 +130,7 @@ section {
       rgba(15, 65, 62, 0.58) 50%,
       rgba(9, 25, 31, 0.75) 100%
     ),
-    url("aset/Raja ampat.avif");
+    url("aset/Raja\ ampat.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,6 +160,7 @@ section {
   line-height: 1.16;
   margin-bottom: 1.25rem;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  color: #e2e8f0;
 }
 
 .hero-subtitle {
@@ -535,6 +536,10 @@ footer {
   background-color: #0f172a;
   color: #cbd5e1;
   padding: 3.5rem 0 2rem;
+}
+
+footer .text-secondary {
+  color: #cbd5e1 !important;
 }
 
 .back-to-top-btn {

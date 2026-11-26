@@ -64,14 +64,14 @@
       <div class="container text-center">
         <div class="row justify-content-center">
           <div class="col-lg-10 col-xl-9">
-            <div class="hero-badge">
+            <div class="hero-badge text-warning">
               <span>"Temukan Cerita, Jelajahi Indonesia"</span>
             </div>
             <h1 class="hero-title">
               Jelajahi Keindahan Indonesia Bersama Jelajah Nusa
             </h1>
             <p class="hero-subtitle">
-              Mau ke pantai, melihat matahari terbit di Bromo, atau menjelajahi Raja Ampat? Pilih perjalanan yang sesuai dengan rencanamu.
+              Mau liburan ke Pantai, melihat matahari terbit di Bromo, atau menjelajahi Raja Ampat? Pilih perjalanan dengan Jelajah Nusa.
             </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
               <a href="#destinations" class="btn-amber text-decoration-none">
@@ -381,14 +381,14 @@
               <div class="row align-items-center g-4">
                 <div class="col-lg-5">
                   <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill">Cek Harga Paket</span>
-                  <h2 class="h2 fw-bold text-white mb-2">Booking Paket Segera</h2>
+                  <h2 class="h2 fw-bold text-white mb-2">Booking Paket</h2>
                   <p class="small text-light opacity-90 mb-3">
                     Pilih paket, tanggal keberangkatan, dan jumlah peserta untuk melihat perkiraan biaya.
                   </p>
-                  <div class="p-3 rounded-3 bg-white bg-opacity-10 border border-light border-opacity-25">
-                    <div class="small text-warning fw-semibold">Estimasi Total Biaya:</div>
-                    <div class="fs-3 fw-bold" id="bookingEstimatedTotal">Rp2.450.000</div>
-                    <div class="small opacity-75" id="bookingSummaryNote">Bali Escape • 1 Peserta</div>
+                  <div id="bookingCostSummary" class="p-3 rounded-3 bg-white bg-opacity-10 border border-light border-opacity-25 d-none">
+                    <div class="small text-warning fw-semibold">Total Biaya:</div>
+                    <div class="fs-3 fw-bold" id="bookingEstimatedTotal">Rp0</div>
+                    <div class="small opacity-75" id="bookingSummaryNote">Pilih paket terlebih dahulu</div>
                   </div>
                 </div>
 
@@ -402,11 +402,12 @@
                         <div class="col-md-6">
                           <label for="bookingName" class="form-label fw-semibold small">Nama Pemesan <span class="text-danger">*</span></label>
                           <input type="text" class="form-control" id="bookingName" placeholder="Masukkan nama lengkap">
-                          <div class="invalid-feedback">Nama pemesan wajib diisi.</div>
+                          <div class="invalid-feedback">Nama pemesan wajib di isi.</div>
                         </div>
                         <div class="col-md-6">
                           <label for="bookingPackage" class="form-label fw-semibold small">Pilih Paket Wisata <span class="text-danger">*</span></label>
                           <select class="form-select" id="bookingPackage">
+                            <option value="" selected disabled>Pilih paket wisata</option>
                             <option value="Bali Escape" data-price="2450000">Bali Escape (Rp2.450.000/org)</option>
                             <option value="Bromo Sunrise Trip" data-price="1350000">Bromo Sunrise Trip (Rp1.350.000/org)</option>
                             <option value="Raja Ampat Discovery" data-price="5750000">Raja Ampat Discovery (Rp5.750.000/org)</option>
@@ -415,12 +416,15 @@
                         </div>
                         <div class="col-md-6">
                           <label for="bookingDate" class="form-label fw-semibold small">Tanggal Keberangkatan <span class="text-danger">*</span></label>
-                          <input type="date" class="form-control" id="bookingDate">
-                          <div class="invalid-feedback">Pilih tanggal keberangkatan yang valid.</div>
+                          <div class="position-relative">
+                            <input type="date" class="form-control" id="bookingDate">
+                            <span id="bookingDatePlaceholder" class="position-absolute top-50 start-0 translate-middle-y ms-3 text-muted small pe-none"></span>
+                            <div class="invalid-feedback">Pilih tanggal keberangkatan yang valid.</div>
+                          </div>
                         </div>
                         <div class="col-md-6">
-                          <label for="bookingGuests" class="form-label fw-semibold small">Jumlah Orang <span class="text-danger">*</span></label>
-                          <input type="number" class="form-control" id="bookingGuests" min="1" max="50" value="1">
+                          <label for="bookingGuests" class="form-label fw-semibold small">Masukkan Jumlah Orang <span class="text-danger">*</span></label>
+                          <input type="number" class="form-control" id="bookingGuests" min="1" max="50" placeholder="Jumlah Orang">
                           <div class="invalid-feedback">Minimal 1 Orang.</div>
                         </div>
                         <div class="col-12">
@@ -497,7 +501,7 @@
             <div class="p-4 rounded-4 bg-white border mt-auto">
               <div class="d-flex align-items-center gap-2 text-teal fw-bold mb-1" style="color: var(--primary-teal);">
                 <i class="bi bi-clock-fill"></i>
-                <span>Jam Layanan Reservasi</span>
+                <span>Jam Layanan</span>
               </div>
               <p class="small text-muted mb-0">Senin – Sabtu: 08.00 – 20.00 WIB<br>Minggu &amp; Hari Libur Nasional: 09.00 – 17.00 WIB</p>
             </div>
@@ -630,7 +634,7 @@
 
       <div class="pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center small text-secondary gap-2">
         <div>&copy; 2026 Jelajah Nusa Website Travel Agency. Hak Cipta Dilindungi.</div>
-        <div>Sertifikat Kompeten X RPL • Web Design</div>
+        <div>Sertikom X RPL • Web Design</div>
       </div>
     </div>
   </footer>
@@ -668,7 +672,7 @@
                 <div class="text-md-end">
                   <span class="small d-block opacity-75">Harga Mulai Dari</span>
                   <span class="fs-4 fw-bold text-warning" id="modalPackagePrice">Rp0</span>
-                  <span class="small">/ orang</span>
+                  <span class="small">/orang</span>
                 </div>
               </div>
             </div>

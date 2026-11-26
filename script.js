@@ -130,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 class="btn btn-teal w-100 d-flex align-items-center justify-content-center gap-2 btn-detail-paket" 
                 data-package-id="${pkg.id}"
               >
-                <i class="bi bi-eye"></i>
                 <span>Detail Paket</span>
               </button>
             </div>
@@ -235,6 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const bookingPackageEl = document.getElementById("bookingPackage");
   const bookingGuestsEl = document.getElementById("bookingGuests");
   const bookingDateEl = document.getElementById("bookingDate");
+  const bookingCostSummary = document.getElementById("bookingCostSummary");
   const bookingTotalEl = document.getElementById("bookingEstimatedTotal");
   const bookingNoteEl = document.getElementById("bookingSummaryNote");
   const bookingAlertBox = document.getElementById("bookingAlertBox");
@@ -242,7 +242,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set minimal tanggal keberangkatan hari ini
   const todayISO = new Date().toISOString().split("T")[0];
   bookingDateEl.setAttribute("min", todayISO);
-  bookingDateEl.value = todayISO;
+  const bookingDatePlaceholder = document.getElementById(
+    "bookingDatePlaceholder",
+  );
+  const updateBookingDatePlaceholder = () => {
+    bookingDatePlaceholder.classList.toggle(
+      "d-none",
+      bookingDateEl.value !== "" || document.activeElement === bookingDateEl,
+    );
+  };
+  bookingDateEl.addEventListener("focus", updateBookingDatePlaceholder);
+  bookingDateEl.addEventListener("blur", updateBookingDatePlaceholder);
+  bookingDateEl.addEventListener("change", updateBookingDatePlaceholder);
+  updateBookingDatePlaceholder();
 
   function formatRupiah(angka) {
     return new Intl.NumberFormat("id-ID", {
@@ -255,13 +267,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateBookingEstimation() {
     const selectedOption =
       bookingPackageEl.options[bookingPackageEl.selectedIndex];
-    const pricePerPerson =
-      parseInt(selectedOption.getAttribute("data-price"), 10) || 0;
+    const hasSelectedPackage = bookingPackageEl.value !== "";
+    bookingCostSummary.classList.toggle("d-none", !hasSelectedPackage);
+    const pricePerPerson = selectedOption.value
+      ? parseInt(selectedOption.getAttribute("data-price"), 10) || 0
+      : 0;
     const guests = Math.max(1, parseInt(bookingGuestsEl.value, 10) || 1);
     const total = pricePerPerson * guests;
 
     bookingTotalEl.textContent = formatRupiah(total);
-    bookingNoteEl.textContent = `${selectedOption.value} • ${guests} orang`;
+    bookingNoteEl.textContent = selectedOption.value
+      ? `${selectedOption.value} • ${guests} orang`
+      : "Pilih paket terlebih dahulu";
   }
 
   bookingPackageEl.addEventListener("change", updateBookingEstimation);
@@ -277,6 +294,13 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
     } else {
       nameInput.classList.remove("is-invalid");
+    }
+
+    if (!bookingPackageEl.value) {
+      bookingPackageEl.classList.add("is-invalid");
+      isValid = false;
+    } else {
+      bookingPackageEl.classList.remove("is-invalid");
     }
 
     if (!bookingDateEl.value) {
@@ -297,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isValid) {
       bookingAlertBox.className = "alert alert-danger mb-3";
       bookingAlertBox.innerHTML =
-        '<i class="bi bi-exclamation-triangle-fill me-1"></i> Periksa kembali nama, tanggal keberangkatan, dan jumlah orang.';
+        '<i class="bi bi-exclamation-triangle-fill me-1"></i> Periksa kembali nama, paket wisata, tanggal keberangkatan, dan jumlah orang.';
       bookingAlertBox.classList.remove("d-none");
       return;
     }
@@ -308,15 +332,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     bookingAlertBox.className = "alert alert-success mb-3";
     bookingAlertBox.innerHTML = `
-      <div class="fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Simulasi pemesanan selesai</div>
+      <div class="fw-bold"><i class="bi bi-check-circle-fill me-1"></i> Pemesanan Berhasil</div>
       <div class="small mt-1">
-        <strong>${escapeHTML(nameInput.value.trim())}</strong>, perkiraan biaya untuk <strong>${escapeHTML(selectedPkgName)}</strong> bagi <strong>${guestsVal} orang</strong> pada <strong>${bookingDateEl.value}</strong> adalah <strong>${totalBiaya}</strong>. Ini hanya simulasi; pemesanan belum dikirim.
-      </div>
+        <strong>${escapeHTML(nameInput.value.trim())}</strong>, perkiraan biaya untuk <strong>${escapeHTML(selectedPkgName)}</strong> bagi <strong>${guestsVal} orang</strong> pada <strong>${bookingDateEl.value}</strong> adalah <strong>${totalBiaya}</strong>.
     `;
     bookingAlertBox.classList.remove("d-none");
     bookingForm.reset();
-    bookingDateEl.value = todayISO;
-    bookingGuestsEl.value = 1;
+    updateBookingDatePlaceholder();
     updateBookingEstimation();
   });
 
