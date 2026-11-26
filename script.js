@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   // DATA PAKET WISATA JELAJAH NUSA
   const tourPackages = [
     {
@@ -502,10 +501,27 @@ document.addEventListener("DOMContentLoaded", () => {
       if (link.getAttribute("href") === `#${currentSectionId}`) {
         link.classList.add("active");
       }
-      
     });
   });
 
-  // Inisialisasi awal untuk paket wisata 
+  new Swiper(".destination-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    navigation: {
+      nextEl: ".destination-swiper-next",
+      prevEl: ".destination-swiper-prev",
+    },
+    pagination: {
+      el: ".destination-swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      576: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+    },
+  });
+
+  // Inisialisasi awal untuk paket wisata
   renderPackages();
 });
